@@ -2,12 +2,11 @@ A bioinformatics pipeline for identifying metallothionein (MT) genes, including 
 
 📁 Repository Structure
 
-├── data/              # Input FASTA / genome files
+├── data/              
 
-├── scripts/           # Python or shell scripts
+├── scripts/          
 
-├── results/           # Output files (BLAST hits, candidates)
+├── results/           
 
-├── notebooks/         # Colab/Jupyter notebooks (optional)
-
+├── notebooks/        
 └── README.md
