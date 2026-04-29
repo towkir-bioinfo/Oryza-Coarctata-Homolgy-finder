@@ -1,0 +1,12 @@
+#if hammer not installed 
+sudo apt update
+sudo apt install hmmer
+
+hmmbuild my_query.hmm my_query.fasta
+#my_query.hmm is the name you want to give your output HMM file.
+#my_query.fasta is your input FASTA file.
+
+hmmsearch --tbloutp results.txt my_query.hmm genome.fasta
+#--tblout results.txt saves a simple, parseable table of the results to a file. This is much easier to work with than the standard output.
+#my_query.hmm is the HMM file you just created.
+#genome.fasta is the file containing your whole-genome sequence.
