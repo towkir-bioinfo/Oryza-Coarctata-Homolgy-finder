@@ -10,3 +10,6 @@ hmmsearch --tbloutp results.txt my_query.hmm genome.fasta
 #--tblout results.txt saves a simple, parseable table of the results to a file. This is much easier to work with than the standard output.
 #my_query.hmm is the HMM file you just created.
 #genome.fasta is the file containing your whole-genome sequence.
+
+# Create a list of target names from your top hits
+grep -v "^#" ocmt_results.txt | awk '$5 < 1e-10 {print $1}' > high_confidence_ids.txt
